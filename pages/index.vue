@@ -1,10 +1,19 @@
 <template>
   <div id="app">
   <v-app id="inspire">
-    <div class="text-center">
-      <h1>What Time Is It?</h1>
+    <v-card>
+      <div class="text-center addSpaceOnTitle">
+        <h1>What Time Is It?</h1>
+      </div>
+    </v-card>
+    <div class="text-center" style="padding-top: 5px">
+        <h1>Press the button to get the current time!</h1>
+      </div>
+    <div class="center-div addSpaceOnText">
       <h3 id="insertTime"></h3>
-      <v-btn rounded dark color="primary" @click="insertTime()">Get Time</v-btn>
+    </div>
+    <div class="center-div">
+        <v-btn rounded dark color="primary" @click="insertTime()">Get Time</v-btn>
     </div>
   </v-app>
 </div>
@@ -21,9 +30,7 @@ export default {
     insertTime () {
       const time = this.currentTime()
       const element = document.getElementById('insertTime')
-      if (this.isRealTime() === 1) {
-        element.innerHTML = 'test'
-      } else if (this.isRealTime() === 2) {
+      if (this.isRealTime()) {
         element.innerHTML = 'F2A73B7B650D4DA8554ADFA9E1024F77477FB250'
       } else {
         element.innerHTML = time
@@ -31,14 +38,25 @@ export default {
     },
     isRealTime () {
       const currentTimeInMinutes = new Date().getMinutes()
-      if (currentTimeInMinutes % 3 === 0) {
-        return 1
+      if (currentTimeInMinutes % 5 === 0) {
+        return true
       }
-      if (currentTimeInMinutes % 9 === 0) {
-        return 2
-      }
-      return 0
+      return false
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .center-div {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .addSpaceOnTitle {
+    padding-top: 10px;
+  }
+  .addSpaceOnText {
+    padding: 15px;
+  }
+</style>
