@@ -4,7 +4,7 @@
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-### Technoligies used
+### Technologies used
 1. Vue.js
 2. Vuetify
 3. Node.js & NPM 
