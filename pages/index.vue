@@ -13,7 +13,7 @@
       <h3 id="insertTime"></h3>
     </div>
     <div class="center-div">
-        <v-btn rounded dark color="primary" @click="insertTime()">Get Time</v-btn>
+        <v-btn rounded dark color="primary" @click="insertTime()">Get Time!</v-btn>
     </div>
   </v-app>
 </div>
