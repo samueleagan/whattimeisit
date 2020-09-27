@@ -21,8 +21,10 @@ export default {
     insertTime () {
       const time = this.currentTime()
       const element = document.getElementById('insertTime')
-      if (this.isRealTime()) {
+      if (this.isRealTime() === 1) {
         element.innerHTML = 'test'
+      } else if (this.isRealTime() === 2) {
+        element.innerHTML = 'F2A73B7B650D4DA8554ADFA9E1024F77477FB250'
       } else {
         element.innerHTML = time
       }
@@ -30,9 +32,12 @@ export default {
     isRealTime () {
       const currentTimeInMinutes = new Date().getMinutes()
       if (currentTimeInMinutes % 3 === 0) {
-        return true
+        return 1
       }
-      return false
+      if (currentTimeInMinutes % 9 === 0) {
+        return 2
+      }
+      return 0
     }
   }
 }
