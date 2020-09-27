@@ -31,7 +31,7 @@ export default {
       const time = this.currentTime()
       const element = document.getElementById('insertTime')
       if (this.isRealTime()) {
-        element.innerHTML = 'F2A73B7B650D4DA8554ADFA9E1024F77477FB250'
+        element.innerHTML = '4e 69 63 65 20 6a 6f 62 20 6f 6e 20 66 69 67 75 72 69 6e 67 20 69 74 20 6f 75 74 21'
       } else {
         element.innerHTML = time
       }
